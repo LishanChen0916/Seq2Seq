@@ -209,8 +209,8 @@ def plotCurve(title, loss, score):
 if __name__ == '__main__':
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    train_dataset = JsonDataloader('', 'train')
-    test_dataset = JsonDataloader('', 'test')
+    train_dataset = JsonDataloader('Data', 'train')
+    test_dataset = JsonDataloader('Data', 'test')
 
     train_loader = DataLoader(train_dataset)
     test_loader = DataLoader(test_dataset)
